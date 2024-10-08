@@ -1,55 +1,50 @@
-// class polos atau tanpa constructor
-class Polos {
-    // atribut objek 
-    String dataString;
-    int dataInteger;
-}
-
-// class dengan constructor
+// membuat class sebagai template
 class Mahasiswa{
-    // atribut
+    // membuat ciri-ciri atau atribut objeck
     String nama;
     String NIM;
     String prodi;
-
-    // constructor
-    // namanya sama dengan nama class
-    // tidak memiliki return value/ nilai balik
-    // method yang pertama kali dipanggil saat objek pertama kali di panggil saat class tersebut di buat
-    Mahasiswa 
-    (String inputNama, String inputNIM, String inputProdi){
-        nama = inputNama;
-        NIM = inputNIM;
-        prodi = inputProdi;
-
-        System.out.println("Nama Mahasiswa : " + nama);
-        System.out.println("NIM : " + NIM);
-        System.out.println("Prodi : " + prodi);
-    }
+    double IPK;
+    int umur;
 }
-
 
 
 
 
 public class App {
     public static void main(String[] args) throws Exception {
-        // pembuatan objek atau instansiasi objek
-        Polos polos_1 = new Polos();
+        // instansiasi atau membuat objek
+        Mahasiswa mhs_1 = new Mahasiswa();
+        Mahasiswa mhs_2 = new Mahasiswa();
 
-        // isi atribut
-        polos_1.dataString = "polos";
-        polos_1.dataInteger = 10;
 
-        // cetak objek
-        System.out.println(polos_1.dataString);
-        System.out.println(polos_1.dataInteger);
+        // pengisian data objek
+        mhs_1.nama = "bunga";
+        mhs_1.NIM = "23241095";
+        mhs_1.prodi = "PTI";
+        mhs_1.IPK =  2.21;
+        mhs_1.umur = 22;
 
-        // pembuatan objek mahasiswa
-        Mahasiswa mhs_1 = new Mahasiswa("putri", "23241879", "PTI");
+        // cetak data
+        System.out.println("Nama Mahasiswa ; " + mhs_1.nama);
+        System.out.println("NIM   : " + mhs_1.NIM);
+        System.out.println("Prodi : " + mhs_1.prodi);
+        System.out.println("IPK   : " + mhs_1.IPK);
+        System.out.println("Umur  : " + mhs_1.umur);
+       
 
-        //  pembuatan objek mahasiswa
-        Mahasiswa mhs_2 = new Mahasiswa("tia", "2324256", "PTI");
-        
-    }
+        // pengisian data objek
+        mhs_2.nama = "duda";
+        mhs_2.NIM = "23241089";
+        mhs_2.prodi = "PTI";
+        mhs_2.IPK =  2.25;
+        mhs_2.umur = 26;
+
+        // cetak data
+        System.out.println("Nama Mahasiswa ; " + mhs_2.nama);
+        System.out.println("NIM   : " + mhs_2.NIM);
+        System.out.println("Prodi : " + mhs_2.prodi);
+        System.out.println("IPK   : " + mhs_2.IPK);
+        System.out.println("Umur  : " + mhs_2.umur);
+   }
 }
